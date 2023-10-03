@@ -47,16 +47,16 @@
             // JavaScript validation code here
 
             if (n === '' || e === '' || p === '' || cp === '') {
-                alert("Please enter all details correctly");
+                alert("Kolom belum berisi semua");
             } else {
                 // Your validation and redirection logic here
 
                 if (p !== cp) {
-                    alert("Passwords do not match");
+                    alert("Password tidak sama");
                 } else if (document.getElementById("p1").value.length > 12) {
-                    alert("Maximum password length is 12 characters");
+                    alert("Maximum panjang password 12 huruf");
                 } else if (document.getElementById("p1").value.length < 6) {
-                    alert("Minimum password length is 6 characters");
+                    alert("Minimum panjang password 6 huruf");
                 } else {
                     alert("Akun anda telah berhasil dibuat");
                     window.location = "https://www.javatpoint.com/";
