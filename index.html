@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Header Content</h1>
+    </header>
+    <div class="container">
+        <h1>CREATE YOUR ACCOUNT</h1>
+        <table cellspacing="2" cellpadding="8" border="0">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="Sugiono" id="n1"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" placeholder="Sugiono@gmail.com" id="e1"></td>
+            </tr>
+            <tr>
+                <td>Set Password</td>
+                <td><input type="password" placeholder="Sugiono123" id="p1"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" placeholder="Sugiono" id="p2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Create" onClick="create_account()"></td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <p>Footer Content</p>
+    </footer>
+
+    <script type="text/javascript">
+        function create_account() {
+            var n = document.getElementById("n1").value;
+            var e = document.getElementById("e1").value;
+            var p = document.getElementById("p1").value;
+            var cp = document.getElementById("p2").value;
+
+            // JavaScript validation code here
+
+            if (n === '' || e === '' || p === '' || cp === '') {
+                alert("Please enter all details correctly");
+            } else {
+                // Your validation and redirection logic here
+
+                if (p !== cp) {
+                    alert("Passwords do not match");
+                } else if (document.getElementById("p1").value.length > 12) {
+                    alert("Maximum password length is 12 characters");
+                } else if (document.getElementById("p1").value.length < 6) {
+                    alert("Minimum password length is 6 characters");
+                } else {
+                    alert("Akun anda telah berhasil dibuat");
+                    window.location = "https://www.javatpoint.com/";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
